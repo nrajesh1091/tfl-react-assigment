@@ -1,8 +1,20 @@
+import { useFetch } from "@API";
 import TflStatusDashboard from "@components/tube-status-description";
-import type { TflStatusResponse } from "@models/TflStatus";
-import { LoadTflLineData } from "@services/home"
+import { useAppConfig } from "@contexts/AppContext";
+import { TflDataContext } from "@contexts/TflDataContext";
+import type { AppConfig } from "@models/AppConfig";
+import { tflDataGroupBy } from "@services/home"
+import { useMemo } from "react";
 
 export const Home = () => {
-    const tflResData: TflStatusResponse = LoadTflLineData();
-    return <TflStatusDashboard tflStatus={tflResData}></TflStatusDashboard>
+    const AppConfig: AppConfig = useAppConfig();
+
+    const tlfAPILink = `${AppConfig?.apiDomain}Line/Mode/Tube/Status`
+    const { data, error } = useFetch(tlfAPILink);
+
+    const tflDataMemo = useMemo(() => tflDataGroupBy(data), [data])
+    return (
+        <TflDataContext tflData={tflDataMemo}>
+            <TflStatusDashboard ></TflStatusDashboard>
+        </TflDataContext>)
 }
