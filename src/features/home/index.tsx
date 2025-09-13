@@ -1,4 +1,5 @@
 import { useFetch } from "@API";
+import { TflLinesList } from "@components/tube-lines-list";
 import TflStatusDashboard from "@components/tube-status-description";
 import { useAppConfig } from "@contexts/AppContext";
 import { TflDataContext } from "@contexts/TflDataContext";
@@ -16,5 +17,6 @@ export const Home = () => {
     return (
         <TflDataContext tflData={tflDataMemo}>
             <TflStatusDashboard ></TflStatusDashboard>
+            <TflLinesList></TflLinesList>
         </TflDataContext>)
 }

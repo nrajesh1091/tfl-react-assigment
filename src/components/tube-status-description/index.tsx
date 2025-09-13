@@ -25,9 +25,9 @@ const TflStatusDashboard = () => {
     // Group lines
     const groupedLines: TubeGroup | undefined =useTflData();
     return (
-        <section className="p-4 space-y-6 flex flex-wrap md:h-70 gap-4">
+        <section className="overflow-auto p-4 space-y-6 flex flex-wrap gap-4">
             {(["red", "orange", "yellow", "green"] as (keyof TubeGroup)[]).filter((group) => groupedLines?.[group].length).map((group,index) => (
-                <article className="sm:w-full md:w-min min-w-[280px]" key={group}>
+                <article className="sm:w-full md:w-min min-w-[320px]" key={group}>
                     <div className={`space-y-2  md:w-80 md:h-70 overflow-y-auto ${statusClasses[group]} grow md:grow-0`} role="alert">
                         <span className="mr-2">{status[group].icon}</span>
                         <div className="flex-col">
