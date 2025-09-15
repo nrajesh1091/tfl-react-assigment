@@ -36,7 +36,7 @@ export const Home = () => {
 
     const tflDataMemo = useMemo(() => tflDataGroupBy(data), [data])
     return (
-        <div className="home-content h-full" >
+        <div className="home-content" >
             <TflDataContext tflData={tflDataMemo}>
                 {openDialog && <ModalDialog closeDialog={closeModalPopUp} lineData={linedata} ref={dialogRef}>
 

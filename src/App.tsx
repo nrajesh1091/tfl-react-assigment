@@ -29,7 +29,7 @@ function App() {
       <ErrorBoundary>
         <AppConfigContext AppConfigData={config}>
           <Header></Header>
-          <h1>Transport for London Tube Status</h1>
+          <h1 className='text-xl p-4 m-4'>Transport for London Tube Status</h1>
           <Home>
 
           </Home>
