@@ -127,5 +127,5 @@ npm run test:coverage
 
 ## Instructions to update App Id and API key. 
 
-- Person can go to `public/assets/config.json` and the value there of `apiKey` & `appId`. This process can be done manually or values can be updated using scripts. The benifit of this approach is we can change value even after the application is build without  introducing any side effects.
+- Person can go to `public/assets/config.json` and the value there of `apiKey` & `appId`. This process can be done manually or values can be updated using scripts. The benifit of this approach is we can change value even after the application is build without  introducing any side effects. If we want to update the values after build we can find the file in `dist/config.json` and update the values.
  
