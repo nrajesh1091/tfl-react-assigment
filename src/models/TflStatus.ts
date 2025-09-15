@@ -20,6 +20,8 @@
     created: string;
     validityPeriods: any[];
     reason?:string;
+    lineId?:string,
+    disruption?: Disruption
   }
   
    interface ServiceType {
@@ -30,6 +32,16 @@
   
    interface Crowding {
     $type: string;
+  }
+  
+interface Disruption {
+    $type: string;               
+    category: string;            
+    categoryDescription: string; 
+    description: string;         
+    affectedRoutes: any[];       
+    affectedStops: any[];        
+    closureText: string;        
   }
   
   export type TflStatusResponse = TflStatus[] | null;

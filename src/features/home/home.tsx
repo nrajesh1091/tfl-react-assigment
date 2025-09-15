@@ -1,14 +1,14 @@
 import { useFetch } from "@services/API/api";
 import { ModalDialog } from "@components/modal/modal";
-import { TflLinesList } from "@features/home/components/tube-lines-list";
-import TflStatusDashboard from "@features/home/components/tube-status-description";
+import { TflLinesList } from "@components/tube-lines-list/tube-lines-list";
+import TflStatusDashboard from "@components/tube-status-description/tube-status-description";
 import { useAppConfig } from "@contexts/app-context";
 import { TflDataContext } from "@contexts/tfl-data-context";
 import type { AppConfig } from "@models/AppConfig";
 import type { TubeStatus } from "@models/TubeStatusDescription";
-import { tflDataGroupBy } from "@features/home/services/home-service"
+import { tflDataGroupBy } from "@services/home/home-service"
 import {  useCallback, useEffect, useMemo, useRef, useState } from "react";
-import "./index.css"
+import "./home.css"
 export const Home = () => {
     const AppConfig: AppConfig = useAppConfig();
     const tlfAPILink = `${AppConfig?.apiDomain}Line/Mode/Tube/Status`

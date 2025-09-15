@@ -3,10 +3,11 @@ import './App.css'
 import { AppConfigContext } from '@contexts/app-context'
 import ErrorBoundary from '@components/error-boundary/error-boundary'
 import { Home } from '@features/home/home'
-import { LoaderProvider } from '@contexts/loader-context'
+
 import { useEffect, useState } from 'react'
 import { Header } from '@components/header/header'
 import { Footer } from '@components/footer/footer'
+import { LoaderProvider } from '@components/loader/loader'
 function App() {
   const [config, setConfig] = useState();
   useEffect(() => {
