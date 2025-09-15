@@ -76,6 +76,11 @@ Preview the production build locally:
 ```bash
 npm run preview
 ```
+Preview &  build the production application locally:
+
+```bash
+npm run build:preview
+```
 
 ---
 
