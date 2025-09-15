@@ -123,3 +123,9 @@ npm run test:coverage
 - Add end-to-end tests (e.g., Cypress or Playwright)  
 - Add CI/CD workflow for automated testing and deployment  
 - Extend `contexts/` with state management (e.g., Redux or Zustand)  
+
+
+## Instructions to update App Id and API key. 
+
+- Person can go to `public/assets/config.json` and the value there of `apiKey` & `appId`. This process can be done manually or values can be updated using scripts. The benifit of this approach is we can change value even after the application is build without  introducing any side effects.
+ 
