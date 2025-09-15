@@ -27,19 +27,19 @@ export const TflLinesList = ({ openModalPopUp }) => {
                 {tflGroup?.red?.map((lines: TubeStatus) => {
                     return <li key={lines.name} className={`flex justify-between  items-center p-3 bg-white ${undergroundLinesColor[lines.name]} shadow-md mb-0.5 border-l-5`}>
                         <span> {lines.name} </span>
-                        <a onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-red-100 rounded-lg">{lines.status}</a>
+                        <a aria-description="Please press enter or click to read further instruction." onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-red-100 rounded-lg">{lines.status}</a>
                     </li>
                 })}
                 {tflGroup?.orange?.map((lines) => {
                     return <li key={lines.name} className={`flex justify-between  items-center p-3 bg-white ${undergroundLinesColor[lines.name]} shadow-md mb-0.5 border-l-5`}>
                         <span> {lines.name} </span>
-                        <a onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-orange-100 rounded-lg">{lines.status}</a>
+                        <a aria-description="Please press enter or click to read further instruction." onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-orange-100 rounded-lg">{lines.status}</a>
                     </li>
                 })}
                 {tflGroup?.yellow?.map((lines) => {
                     return <li key={lines.name} className={`flex justify-between  items-center p-3 bg-white ${undergroundLinesColor[lines.name]} shadow-md mb-0.5 border-l-5`}>
                         <span> {lines.name} </span>
-                        <a onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-yellow-100 rounded-lg">{lines.status}</a>
+                        <a aria-description="Please press enter or click to read further instruction." onClick={() => openModalPopUp(lines)} href="#" className="p-2 mb-2 text-red-800 min-w-[130px] bg-yellow-100 rounded-lg">{lines.status}</a>
                     </li>
                 })}
                 {tflGroup?.green?.map((lines) => {
