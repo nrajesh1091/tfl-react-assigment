@@ -1,5 +1,5 @@
 
-import type { TubeGroup } from "@models/tube-status-description";
+import type { TubeGroup } from "@models/TubeStatusDescription";
 import { createContext, useContext } from "react";
 
 

@@ -1,4 +1,4 @@
-import { useLoader } from "@contexts/LoaderContext";
+import { useLoader } from "@contexts/loader-context";
 import { useEffect, useState } from "react";
 
 

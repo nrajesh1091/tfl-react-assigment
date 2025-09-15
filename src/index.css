@@ -1,1 +1,16 @@
+
 @import "tailwindcss";
+@theme {
+    --color-Bakerloo: #B26313;
+    --color-Central: #DC241F;
+    --color-Circle: #FFD329;
+    --color-District: #007D32;
+    --color-Hammersmith & City: #F4A9BE;
+    --color-Jubilee: #A1A5A7;
+    --color-Metropolitan: #9B0058;
+    --color-Northern: #000000;
+    --color-Piccadilly: #0019A8;
+    --color-Victoria: #0098D8;
+    --color-Waterloo & City: #93CEBA;
+    --color-Elizabeth: #6950A1;
+}

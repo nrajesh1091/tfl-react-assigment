@@ -1,29 +1,39 @@
 
 import './App.css'
-import { AppConfigContext } from '@contexts/AppContext'
-import ErrorBoundary from '@components/error-boundary'
-import { Home } from '@features/home'
-import { LoaderProvider } from '@contexts/LoaderContext'
+import { AppConfigContext } from '@contexts/app-context'
+import ErrorBoundary from '@components/error-boundary/error-boundary'
+import { Home } from '@features/home/home'
+import { LoaderProvider } from '@contexts/loader-context'
 import { useEffect, useState } from 'react'
- function App() {
-  const [config,setConfig] = useState();
-  useEffect(()=>{
-    (async()=>{
-    const res = await fetch("./assets/config.json");
-    const data = await res.json()
-    setConfig(data)
+import { Header } from '@components/header/header'
+import { Footer } from '@components/footer/footer'
+function App() {
+  const [config, setConfig] = useState();
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("./assets/config.json");
+        const data = await res.json()
+        setConfig(data)
+      }
+      catch (e) {
+        console.log(e)
+      }
     })()
-  },[])
+  }, [])
 
 
   return (
     <LoaderProvider>
       <ErrorBoundary>
         <AppConfigContext AppConfigData={config}>
+          <Header></Header>
+          <h1>Transport for London Tube Status</h1>
           <Home>
 
           </Home>
         </AppConfigContext>
+        <Footer></Footer>
       </ErrorBoundary>
     </LoaderProvider>
   )
